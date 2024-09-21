@@ -4,21 +4,14 @@ use App\Http\Controllers\CheckingTest;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
-
+// Practice By Badsha in learning laravel  
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('showPost');
+})->name('home');
 
-//Route::get('/check', [CheckingTest::class, 'Checking']);
-Route::get('/user', [UserController::class,'index'])->name('user');
-Route::post('/user/add', [UserController::class,'store'])->name('user.add');
+Route::get('/create_post', function () {
+    return view('createPost');
+})->name('create');
+
+
+
