@@ -22,5 +22,9 @@ Route::post('/store/post', [PostController::class, 'store'])->name('store');
 
 Route::get('/delete/{id}', [PostController::class, 'destroy'])->name('destroy');
 
+Route::get('/edit/{id}', [PostController::class,'edit'])->name('edit');
+
+Route::put('/update/{id}', [PostController::class,'update'])->name('update');
+
 
 
